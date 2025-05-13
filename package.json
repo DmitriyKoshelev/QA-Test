@@ -1,18 +1,7 @@
 {
-  "dependencies": {
-    "dmytro_k": "^1.0.0",
-    "is-even-check-new": "^1.0.1"
-  },
-  "name": "dmytro_k",
-  "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {},
-  "keywords": [],
-  "author": "dmytro_k",
-  "license": "MIT",
-  "description": "",
   "devDependencies": {
     "@playwright/test": "^1.52.0",
     "@types/node": "^22.15.17"
-  }
+  },
+  "scripts": {}
 }
