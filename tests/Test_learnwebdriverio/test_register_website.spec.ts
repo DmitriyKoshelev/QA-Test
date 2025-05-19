@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-test('R-01 test register on the website', { tag: "@reg"}, async ({page}) => {
+test('dv-06 register on the website', { tag: "@reg"}, async ({page}) => {
      test.setTimeout(120_000);
     await page.goto('https://demo.learnwebdriverio.com/register');
     await expect(page.getByRole('textbox', { name: 'Username' })).toBeVisible();

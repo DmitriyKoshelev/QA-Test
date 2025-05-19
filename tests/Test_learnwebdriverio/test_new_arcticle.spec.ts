@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-test('AR-01 test register on the website', { tag: "@arctical"}, async ({page}) => {
+test('dv-05  register on the website', { tag: "@arctical"}, async ({page}) => {
      test.setTimeout(120_000);
     await page.goto('https://demo.learnwebdriverio.com/');
     await page.getByRole('link', { name: ' Sign in' }).click();

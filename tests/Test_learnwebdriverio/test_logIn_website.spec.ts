@@ -1,7 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-
-test('L-01 test logIn on the website', { tag: "@log"}, async ({page}) => {
+test('dv-04 login must be performed', { tag: "@log"}, async ({page}) => {
      test.setTimeout(120_000);
 await page.goto('https://demo.learnwebdriverio.com/');
 await expect(page.getByRole('link', { name: ' Sign in' })).toBeVisible();

@@ -1,10 +1,9 @@
-import { test, expect } from '@playwright/test';
+ import { test, expect } from '@playwright/test';
 
-test('PR-01 test change profile on the website', { tag: "@profile"}, async ({page}) => {
+test('dv-02 change profile on the website', { tag: "@profile"}, async ({page}) => {
      test.setTimeout(120_000);
     await page.goto('https://demo.learnwebdriverio.com/');
-    await page.getByRole('link', { name: ' Sign in' }).click();
-    await page.getByRole('textbox', { name: 'Email' }).click();
+    await expect(page.getByRole('link', { name: ' Sign in' })).toBeVisible();
     await page.getByRole('textbox', { name: 'Email' }).fill('tester01@gmail.com');
     await page.getByRole('textbox', { name: 'Email' }).press('Tab');
     await page.getByRole('textbox', { name: 'Password' }).fill('12345');
