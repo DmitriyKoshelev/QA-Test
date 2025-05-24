@@ -30,9 +30,9 @@ test('css-03 change profile on the website', { tag: "@profile"}, async ({page}) 
     await page.locator('input[placeholder="Password"]').fill('12345');
     await page.locator(".btn-lg").click();
     await page.locator('a[href="/settings"]').click();
-//     await page.locator('input[placeholder="URL of profile picture"]').fill('some test is here');
+    await page.locator('input[placeholder="URL of profile picture"]').fill('some test is here');
     await page.locator('input[placeholder="Your username"]').fill('David');
-    await page.locator('input[placeholder="Short bio about you"]').fill('there any text');
+    await page.locator('//*[@class="form-control"]').fill('there any text');
     await page.locator('input[placeholder="Email"]').fill('tester01@gmail.com');
     await page.locator('input[placeholder="Password"]').fill('12345');
     await expect(page.locator(".btn-primary")).toBeVisible();
@@ -47,9 +47,10 @@ test('css-04  register on the website', { tag: "@arctical"}, async ({page}) => {
      await page.locator('input[placeholder="Password"]').fill('12345');
      await page.locator(".btn-lg").click();
      await page.locator('a[href="/editor"]').click();
-     await page.locator('input[placeholder="Article Title"]').fill('Behappy');
-     // await page.locator('input[placeholder="What's this article about?"').fill('Behappy');
-     // await page.locator('input[placeholder="Write your article (in markdown)"]').fill('Writeabout');
-     await page.locator('input[placeholder="Enter tags"]').fill('myteg');
+     await page.locator('//*[@class="form-control form-control-lg"]').fill('Behappy');
+     await page.locator('//*[@data-qa-id="editor-description"]').fill('Behappy');
+     await expect(page.getByRole('textbox', { name: 'Write your article (in markdown)'})).toBeVisible();
+     await page.locator('//*[@class="auto-textarea-input no-border no-resize"]').fill('any more');
+     await page.locator('//*[@data-qa-id="editor-tags"]').fill('myteg');
      await expect(page.locator(".btn-primary")).toBeVisible();
-});
+}); 
