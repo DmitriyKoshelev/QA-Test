@@ -34,3 +34,7 @@ test('css-04  register on the website', { tag: "@arctical"}, async ({page}) => {
      await page.locator('//*[@data-qa-id="editor-tags"]').fill('myteg');
      await expect(page.locator(".btn-primary")).toBeVisible();
 }); 
+
+
+
+ 
