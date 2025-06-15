@@ -15,7 +15,6 @@ test('cc-01 buttons', async ({ page }) => {
      await right.click();
      });
 
-
     test('cc-02', { tag: "@textbox"}, async ({page}) => {
      test.slow();
      await page.goto('https://demoqa.com/');

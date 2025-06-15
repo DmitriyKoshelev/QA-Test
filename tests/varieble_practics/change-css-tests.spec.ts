@@ -55,30 +55,6 @@ test('css-03 change profile on the website', { tag: "@profile"}, async ({page}) 
     await prime.click();
 });
 
-// test('css-04  register on the website', { tag: "@arctical"}, async ({page}) => {
-//      test.slow();
-//      await page.goto('https://demo.learnwebdriverio.com/');
-//      const singIn = page.locator('a[href="/login"]');
-//      const userEmail = page.locator('input[placeholder="Email');
-//      const password = page.locator('input[placeholder="Password"]');
-//      const btn = page.locator('.btn-lg');
-//      const arc = page.locator('input[placeholder="Article Title"]');
-//      const about = page.locator('textbox', { name: 'What\'s this article about?' });
-//      const mark = page.locator('textbox', { name: 'Write your article (in' });
-//      const tags = page.locator('input[placeholder="Enter tags"]');
-//      const prim = page.locator('.btn-primary');
-//      await singIn.click();
-//      await userEmail.fill('tester01@gmail.com');
-//      await password.fill('12345');
-//      await btn.click();
-//      await arc.fill('Behappy');
-//      await about.fill('any text');
-//      await mark.fill('any more text');
-//      await tags.fill('my tag');
-//      await prim.click();
-// });
-
-
 test('css-04  register on the website', { tag: "@arctical"}, async ({page}) => {
      test.slow();
      await page.goto('https://demo.learnwebdriverio.com/');
