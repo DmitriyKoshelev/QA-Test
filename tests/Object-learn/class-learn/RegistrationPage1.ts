@@ -2,7 +2,7 @@ import {Locator, Page} from '@playwright/test';
 
 export class RegistrationPage {
     page: Page;
-    // usernameInputLocator: Locator;
+    usernameInputLocator: Locator;
     emailInputLocator: Locator;
     passwordInputLocator: Locator;
     singUpButtonLocator: Locator;
