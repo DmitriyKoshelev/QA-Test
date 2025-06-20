@@ -12,4 +12,4 @@ export class LoginUserPage {
     await this.page.locator('#password').fill(password)
     await this.page.locator('#login-button').click();
   }
-}
+};
